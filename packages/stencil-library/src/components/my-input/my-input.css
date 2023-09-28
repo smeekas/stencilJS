@@ -1,0 +1,50 @@
+:host {
+  display: block;
+}
+.error {
+  background-color: rgba(255, 0, 0, 0.397);
+}
+.err {
+  background-color: rgba(0, 38, 255, 0.397);
+}
+.inputDiv {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+input {
+  font-size: 16px;
+  font-weight: 300;
+  padding: 4px;
+  border: none;
+  outline: none;
+}
+/* input:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
+} */
+.sm {
+  padding: 2px 4px;
+}
+.me {
+  padding: 4px 8px;
+}
+.lg {
+  padding: 8px 8px;
+}
+.inputContainer {
+  display: flex;
+  width: fit-content;
+  background-color: white;
+  border: 1px solid black;
+}
+.inputContainer button {
+  /* padding: 4px 8px; */
+  background-color: white;
+  border: none;
+  outline: none;
+}
+
+.inputContainer button:hover {
+  background-color: gray;
+  cursor: pointer;
+}
