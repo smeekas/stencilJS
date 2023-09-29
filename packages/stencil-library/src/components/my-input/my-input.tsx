@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, State } from '@stencil/core';
+import { Component, Host, h, Prop, State, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'my-input',
@@ -15,11 +15,14 @@ export class MyInput {
   @Prop({ mutable: true }) value: string;
   @Prop() size: 'sm' | 'lg' | 'me' = 'me';
   @State() hasError: boolean = false;
+
+  @Event() changeEvent: EventEmitter<string>;
   public nativeElement?: HTMLInputElement;
 
   handleChange(e: Event) {
     const val = (e.target as HTMLInputElement).value;
     this.value = val;
+    this.changeEvent.emit(val);
     this.hasError = !val;
   }
   clearButtonClick() {

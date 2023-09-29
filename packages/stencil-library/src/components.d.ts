@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface MyCheckbox {
+        "checked": boolean;
+        "className": string;
+        "disabled": boolean;
+        "label": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -37,11 +43,25 @@ export namespace Components {
     interface MyWeb {
     }
 }
+export interface MyCheckboxCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMyCheckboxElement;
+}
+export interface MyInputCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMyInputElement;
+}
 export interface MyWebCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLMyWebElement;
 }
 declare global {
+    interface HTMLMyCheckboxElement extends Components.MyCheckbox, HTMLStencilElement {
+    }
+    var HTMLMyCheckboxElement: {
+        prototype: HTMLMyCheckboxElement;
+        new (): HTMLMyCheckboxElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -67,6 +87,7 @@ declare global {
         new (): HTMLMyWebElement;
     };
     interface HTMLElementTagNameMap {
+        "my-checkbox": HTMLMyCheckboxElement;
         "my-component": HTMLMyComponentElement;
         "my-input": HTMLMyInputElement;
         "my-item": HTMLMyItemElement;
@@ -74,6 +95,14 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface MyCheckbox {
+        "checked"?: boolean;
+        "className"?: string;
+        "disabled"?: boolean;
+        "label"?: string;
+        "onBlurEvent"?: (event: MyCheckboxCustomEvent<boolean>) => void;
+        "onChangeEvent"?: (event: MyCheckboxCustomEvent<boolean>) => void;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -92,6 +121,7 @@ declare namespace LocalJSX {
         "clearable"?: boolean;
         "label"?: string;
         "message"?: string;
+        "onChangeEvent"?: (event: MyInputCustomEvent<string>) => void;
         "placeholder"?: string;
         "required"?: boolean;
         "size"?: 'sm' | 'lg' | 'me';
@@ -107,6 +137,7 @@ declare namespace LocalJSX {
         "onTagC"?: (event: MyWebCustomEvent<string>) => void;
     }
     interface IntrinsicElements {
+        "my-checkbox": MyCheckbox;
         "my-component": MyComponent;
         "my-input": MyInput;
         "my-item": MyItem;
@@ -117,6 +148,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "my-checkbox": LocalJSX.MyCheckbox & JSXBase.HTMLAttributes<HTMLMyCheckboxElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-input": LocalJSX.MyInput & JSXBase.HTMLAttributes<HTMLMyInputElement>;
             "my-item": LocalJSX.MyItem & JSXBase.HTMLAttributes<HTMLMyItemElement>;

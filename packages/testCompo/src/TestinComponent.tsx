@@ -3,6 +3,7 @@ import {
   defineCustomElements,
   MyWeb,
   MyInput,
+  MyCheckbox,
 } from "react-library";
 
 defineCustomElements();
@@ -17,7 +18,17 @@ function TestinComponent() {
     <div>
       <MyComponent first="ff" middle="mm" last="as" />
       <MyWeb />
-      <MyInput defaultValue="1212" label="newest" />
+      <MyInput
+        clearable
+        onChangeEvent={(e) => console.log(e)}
+        defaultValue="1212"
+        label="newest"
+      />
+      <MyCheckbox
+        onChangeEvent={(e) => console.log(e)}
+        onBlurEvent={(e) => console.log("BLUR")}
+        label="lal"
+      />
     </div>
   );
 }

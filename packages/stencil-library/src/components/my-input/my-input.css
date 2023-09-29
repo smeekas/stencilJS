@@ -19,17 +19,25 @@ input {
   border: none;
   outline: none;
 }
-/* input:focus {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
-} */
-.sm {
+
+.sm input {
   padding: 2px 4px;
 }
-.me {
+.me input {
   padding: 4px 8px;
 }
-.lg {
+.lg input {
   padding: 8px 8px;
+}
+
+.sm button {
+  padding: 4px;
+}
+.me button {
+  padding: 6px;
+}
+.lg button {
+  padding: 8px;
 }
 .inputContainer {
   display: flex;
@@ -37,10 +45,10 @@ input {
   background-color: white;
   border: 1px solid black;
 }
+
 .inputContainer button {
-  /* padding: 4px 8px; */
-  background-color: white;
   border: none;
+  background-color: white;
   outline: none;
 }
 
