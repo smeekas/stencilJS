@@ -27,14 +27,8 @@ export class MyInput {
   }
   clearButtonClick() {
     this.value = '';
-    console.log(this.value, this.nativeElement);
-    if (this.clearable && this.nativeElement) {
-      console.log('CLEAR', this.nativeElement);
-      console.log(this.nativeElement.value);
-    }
-  }
-  componentDidLoad() {
-    console.log(this.value);
+    this.hasError = true;
+    this.changeEvent.emit('');
   }
   render() {
     return (

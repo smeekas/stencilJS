@@ -7,12 +7,11 @@
 
 ## Properties
 
-| Property    | Attribute    | Description | Type      | Default     |
-| ----------- | ------------ | ----------- | --------- | ----------- |
-| `checked`   | `checked`    |             | `boolean` | `undefined` |
-| `className` | `class-name` |             | `string`  | `undefined` |
-| `disabled`  | `disabled`   |             | `boolean` | `undefined` |
-| `label`     | `label`      |             | `string`  | `undefined` |
+| Property   | Attribute  | Description | Type      | Default     |
+| ---------- | ---------- | ----------- | --------- | ----------- |
+| `checked`  | `checked`  |             | `boolean` | `undefined` |
+| `disabled` | `disabled` |             | `boolean` | `undefined` |
+| `label`    | `label`    |             | `string`  | `undefined` |
 
 
 ## Events

@@ -4,6 +4,7 @@ import {
   MyWeb,
   MyInput,
   MyCheckbox,
+  MySlider,
 } from "react-library";
 
 defineCustomElements();
@@ -28,6 +29,14 @@ function TestinComponent() {
         onChangeEvent={(e) => console.log(e)}
         onBlurEvent={(e) => console.log("BLUR")}
         label="lal"
+      />
+      <MySlider
+        min="2"
+        max="10"
+        step={2}
+        showValue
+        onChangeEvent={(e) => console.log(e.detail)}
+        onMouseUpEvent={(e) => console.log(e.detail)}
       />
     </div>
   );
