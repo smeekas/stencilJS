@@ -15,7 +15,6 @@
 | `placeholder` | `placeholder` |             | `string`               | `undefined` |
 | `required`    | `required`    |             | `boolean`              | `undefined` |
 | `size`        | `size`        |             | `"lg" \| "me" \| "sm"` | `'me'`      |
-| `type`        | `type`        |             | `"number" \| "text"`   | `undefined` |
 | `value`       | `value`       |             | `string`               | `undefined` |
 
 

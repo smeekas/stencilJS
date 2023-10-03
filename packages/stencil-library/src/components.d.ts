@@ -32,17 +32,12 @@ export namespace Components {
         "placeholder": string;
         "required": boolean;
         "size": 'sm' | 'lg' | 'me';
-        "type": 'text' | 'number';
         "value": string;
-    }
-    interface MyItem {
-        "label": string;
-        "required": string;
     }
     interface MySlider {
         "max": string;
         "min": string;
-        "showValue": boolean;
+        "show": boolean;
         "step": number;
         "value": string;
     }
@@ -84,12 +79,6 @@ declare global {
         prototype: HTMLMyInputElement;
         new (): HTMLMyInputElement;
     };
-    interface HTMLMyItemElement extends Components.MyItem, HTMLStencilElement {
-    }
-    var HTMLMyItemElement: {
-        prototype: HTMLMyItemElement;
-        new (): HTMLMyItemElement;
-    };
     interface HTMLMySliderElement extends Components.MySlider, HTMLStencilElement {
     }
     var HTMLMySliderElement: {
@@ -106,7 +95,6 @@ declare global {
         "my-checkbox": HTMLMyCheckboxElement;
         "my-component": HTMLMyComponentElement;
         "my-input": HTMLMyInputElement;
-        "my-item": HTMLMyItemElement;
         "my-slider": HTMLMySliderElement;
         "my-web": HTMLMyWebElement;
     }
@@ -141,19 +129,14 @@ declare namespace LocalJSX {
         "placeholder"?: string;
         "required"?: boolean;
         "size"?: 'sm' | 'lg' | 'me';
-        "type"?: 'text' | 'number';
         "value"?: string;
-    }
-    interface MyItem {
-        "label"?: string;
-        "required"?: string;
     }
     interface MySlider {
         "max"?: string;
         "min"?: string;
         "onChangeEvent"?: (event: MySliderCustomEvent<string>) => void;
         "onMouseUpEvent"?: (event: MySliderCustomEvent<string>) => void;
-        "showValue"?: boolean;
+        "show"?: boolean;
         "step"?: number;
         "value"?: string;
     }
@@ -165,7 +148,6 @@ declare namespace LocalJSX {
         "my-checkbox": MyCheckbox;
         "my-component": MyComponent;
         "my-input": MyInput;
-        "my-item": MyItem;
         "my-slider": MySlider;
         "my-web": MyWeb;
     }
@@ -177,7 +159,6 @@ declare module "@stencil/core" {
             "my-checkbox": LocalJSX.MyCheckbox & JSXBase.HTMLAttributes<HTMLMyCheckboxElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "my-input": LocalJSX.MyInput & JSXBase.HTMLAttributes<HTMLMyInputElement>;
-            "my-item": LocalJSX.MyItem & JSXBase.HTMLAttributes<HTMLMyItemElement>;
             "my-slider": LocalJSX.MySlider & JSXBase.HTMLAttributes<HTMLMySliderElement>;
             "my-web": LocalJSX.MyWeb & JSXBase.HTMLAttributes<HTMLMyWebElement>;
         }

@@ -9,14 +9,13 @@ export class MySlider {
   @Prop() min: string;
   @Prop() max: string;
   @Prop() step: number;
-  @Prop() showValue: boolean;
-  @Prop({ mutable: true }) value: string = '';
+  @Prop() show: boolean;
+  @Prop({ mutable: true, reflect: true }) value: string = '';
   @Event() changeEvent: EventEmitter<string>;
   @Event() mouseUpEvent: EventEmitter<string>;
   handleInputChange(e: Event) {
     const element = e.target as HTMLInputElement;
     this.value = element.value;
-    console.log(this.showValue);
     this.changeEvent.emit(element.value);
   }
   handleMouseUp(e: Event) {
@@ -24,6 +23,7 @@ export class MySlider {
 
     this.mouseUpEvent.emit(element.value);
   }
+
   render() {
     return (
       <Host>
@@ -31,7 +31,7 @@ export class MySlider {
           {this.min && <span>{this.min}</span>}
           <input onInput={e => this.handleInputChange(e)} onChange={e => this.handleMouseUp(e)} type="range" min={this.min} max={this.max} step={this.step} value={this.value} />
           {this.max && <span>{this.max}</span>}
-          {this.showValue && <p>{this.value}</p>}
+          {this.show && <div>{this.value}</div>}
         </div>
       </Host>
     );

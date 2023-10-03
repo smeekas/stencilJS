@@ -6,7 +6,6 @@ import { Component, Host, h, Prop, State, Event, EventEmitter } from '@stencil/c
   shadow: false,
 })
 export class MyInput {
-  @Prop() type: 'text' | 'number';
   @Prop() label: string;
   @Prop() placeholder: string;
   @Prop() required: boolean;

@@ -23,9 +23,9 @@ export class MyCheckbox {
     return (
       <Host>
         <div class="inputDivCheckbox">
-          <input onBlur={() => this.onInputBlur()} onInput={() => this.onInputChange()} id="check" type="checkbox" checked={this.checked} />
-          <label onClick={() => this.onInputChange()} htmlfor="check">
-            Checkbox
+          <input onBlur={() => this.onInputBlur()} onInput={() => this.onInputChange()} disabled={this.disabled} id="check" type="checkbox" checked={this.checked} />
+          <label onClick={() => !this.disabled && this.onInputChange()} htmlfor="check">
+            {this.label}
           </label>
         </div>
       </Host>
