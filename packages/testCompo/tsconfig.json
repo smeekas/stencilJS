@@ -16,6 +16,9 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
+  "exclude": [
+    "stencilss/loader" //fix weird Vite error "outdated optimize dep"
+  ],
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

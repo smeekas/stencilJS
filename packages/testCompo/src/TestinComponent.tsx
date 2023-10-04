@@ -5,7 +5,7 @@ import {
   MyInput,
   MyCheckbox,
   MySlider
-} from "stencilreactss";
+} from "stencilreactss/";
 
 defineCustomElements();
 

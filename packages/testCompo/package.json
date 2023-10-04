@@ -11,8 +11,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-      "stencilreactss": "0.0.2",
-      "stencilss":"0.0.2"
+      "stencilreactss": "0.0.4",
+      "stencilss":"0.0.4"
     
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import { Config } from '@stencil/core';
-import {reactOutputTarget} from '@stencil/react-output-target'
+import { reactOutputTarget } from '@stencil/react-output-target';
 export const config: Config = {
   namespace: 'stencil-library',
   outputTargets: [
@@ -22,7 +22,10 @@ export const config: Config = {
       proxiesFile: '../react-library/lib/components/stencil-generated/index.ts',
     }),
   ],
+  extras: {
+    enableImportInjection: true,
+  },
   testing: {
-    browserHeadless: "new",
+    browserHeadless: 'new',
   },
 };

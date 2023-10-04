@@ -1,6 +1,6 @@
 {
   "name": "stencilreactss",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "> TODO: description",
   "author": "Smeet Kachhadiya <smeet.k@simformsolutions.com>",
   "homepage": "",
@@ -25,6 +25,6 @@
     "access": "public"
   },
   "dependencies": {
-    "stencilss": "0.0.2"
+    "stencilss": "0.0.4"
   }
 }
