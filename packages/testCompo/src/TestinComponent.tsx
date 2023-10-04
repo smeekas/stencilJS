@@ -10,6 +10,7 @@ import {
 defineCustomElements();
 
 import React from "react";
+import { MyCheckboxCustomEvent, MyInputCustomEvent, MySliderCustomEvent } from "stencilss";
 
 function TestinComponent() {
   const changeHandler = (name: string) => {
@@ -21,13 +22,13 @@ function TestinComponent() {
       <MyWeb />
       <MyInput
         clearable
-        onChangeEvent={(e) => console.log(e)}
+        onChangeEvent={(e: MyInputCustomEvent<string>) => console.log(e)}
         defaultValue="1212"
         label="newest"
       />
       <MyCheckbox
-        onChangeEvent={(e) => console.log(e)}
-        onBlurEvent={(e) => console.log("BLUR")}
+        onChangeEvent={(e: MyCheckboxCustomEvent<boolean>) => console.log(e)}
+        onBlurEvent={() => console.log("BLUR")}
         label="lal"
       />
       <MySlider
@@ -35,8 +36,8 @@ function TestinComponent() {
         max="10"
         step={2}
         show
-        onChangeEvent={(e) => console.log(e.detail)}
-        onMouseUpEvent={(e) => console.log(e.detail)}
+        onChangeEvent={(e: MySliderCustomEvent<string>) => console.log(e.detail)}
+        onMouseUpEvent={(e:MySliderCustomEvent<string>) => console.log(e.detail)}
       />
     </div>
   );
