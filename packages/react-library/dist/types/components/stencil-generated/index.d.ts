@@ -1,8 +1,7 @@
 /// <reference types="react" />
-import type { JSX } from 'stencil-library';
+import type { JSX } from 'stencilss';
 export declare const MyCheckbox: import("react").ForwardRefExoticComponent<JSX.MyCheckbox & Omit<import("react").HTMLAttributes<HTMLMyCheckboxElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLMyCheckboxElement>>;
 export declare const MyComponent: import("react").ForwardRefExoticComponent<JSX.MyComponent & Omit<import("react").HTMLAttributes<HTMLMyComponentElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLMyComponentElement>>;
 export declare const MyInput: import("react").ForwardRefExoticComponent<JSX.MyInput & Omit<import("react").HTMLAttributes<HTMLMyInputElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLMyInputElement>>;
-export declare const MyItem: import("react").ForwardRefExoticComponent<JSX.MyItem & Omit<import("react").HTMLAttributes<HTMLMyItemElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLMyItemElement>>;
 export declare const MySlider: import("react").ForwardRefExoticComponent<JSX.MySlider & Omit<import("react").HTMLAttributes<HTMLMySliderElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLMySliderElement>>;
 export declare const MyWeb: import("react").ForwardRefExoticComponent<JSX.MyWeb & Omit<import("react").HTMLAttributes<HTMLMyWebElement>, "style"> & import("./react-component-lib/interfaces").StyleReactProps & import("react").RefAttributes<HTMLMyWebElement>>;

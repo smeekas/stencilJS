@@ -1,3 +1,3 @@
-export { defineCustomElements } from "stencil-library/loader";
+export { defineCustomElements } from "stencilss/loader";
 export * from "./components/stencil-generated";
 //# sourceMappingURL=index.js.map

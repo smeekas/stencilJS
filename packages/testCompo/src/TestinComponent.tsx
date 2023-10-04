@@ -5,7 +5,7 @@ import {
   MyInput,
   MyCheckbox,
   MySlider,
-} from "react-library";
+} from "stencilreactss";
 
 defineCustomElements();
 
@@ -34,7 +34,7 @@ function TestinComponent() {
         min="2"
         max="10"
         step={2}
-        showValue
+        show
         onChangeEvent={(e) => console.log(e.detail)}
         onMouseUpEvent={(e) => console.log(e.detail)}
       />

@@ -1,5 +1,5 @@
 {
-  "name": "react-library",
+  "name": "stencilreactss",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Smeet Kachhadiya <smeet.k@simformsolutions.com>",
@@ -25,6 +25,6 @@
     "access": "public"
   },
   "dependencies": {
-    "stencil-library": "*"
+    "stencilss": "*"
   }
 }
