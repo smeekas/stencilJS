@@ -1,4 +1,4 @@
 /// <reference types="vite/client" />
-import { Components } from "stencilss";
+import { Components } from "stencilreactss/dist/types/index";
 
-declare module "stencilss";
+declare module "stencilreactss/dist/types/index";
